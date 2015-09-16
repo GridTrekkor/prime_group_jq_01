@@ -47,9 +47,10 @@ setInterval(function(){	DoPriceChange(); }, 500);
 // disable buttons when application ends
 setTimeout(function() { 
 	$("Button").attr('disabled','true');
+	$("Button").css('opacity', '0.3');
 	var Cash = (parseFloat($("#Cash").text()) - 100);
 	alert("Game over\n" + (Cash > 0 ? "You earned" : "You Lost") + ": $" + Cash.toFixed(2));
-}, 3000);
+}, 6000);
 
 var ApplesPurchased = 0;
 var ApplesTotalPrice = 0;
